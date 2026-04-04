@@ -86,5 +86,29 @@ const murderMystery2Products = [
         featured: true, 
         features: ['', '', ' '] 
     },
+     { 
+        id: '11mm', 
+        name: ' rainbow set', 
+        image: 'https://tse3.mm.bing.net/th/id/OIP.wgYQxSTdOmyeH6L9ladVFAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', 
+        price: 15000, 
+        featured: true, 
+        features: ['', '', ' '] 
+    },
+     { 
+        id: '12mm', 
+        name: 'turkey ', 
+        image: 'https://tse3.mm.bing.net/th/id/OIP.gSO-bqvM5iH5xJ_A4s4AXwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', 
+        price: 40000, 
+        featured: true, 
+        features: ['', '', ' '] 
+    },
+     { 
+        id: '13mm', 
+        name: ' flowerwood set', 
+        image: 'https://tse1.mm.bing.net/th/id/OIP.NPK-rhnqvDtr_ZmnsyuBawHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', 
+        price: 10000, 
+        featured: true, 
+        features: ['', '', ' '] 
+    },
 
 ];
