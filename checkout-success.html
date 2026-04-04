@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم إتمام الطلب - Yuki Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🎮 Yuki Store</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="blox-fruits.html">Blox Fruits</a></li>
+                <li><a href="murder-mystery-2.html">Murder Mystery 2</a></li>
+                <li><a href="adopt-me.html">Adopt Me</a></li>
+                <li><a href="robux.html">Robux</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="success-page">
+        <div class="success-content">
+            <div class="success-icon">✅</div>
+            <h1>تم إتمام الطلب بنجاح!</h1>
+            <p>شكراً لك على الشراء. سيتم التواصل معك قريباً عبر واتساب أو تيليجرام</p>
+            
+            <div class="success-details" id="orderDetails">
+                <h3 style="color: var(--primary-purple); margin-bottom: 1rem;">تفاصيل الطلب</h3>
+                <p><strong>المنتج:</strong> <span id="successProduct"></span></p>
+                <p><strong>الحزمة:</strong> <span id="successPackage"></span></p>
+                <p><strong>السعر:</strong> <span id="successPrice"></span> دينار عراقي</p>
+                <p><strong>اسم روبلوكس:</strong> <span id="successRoblox"></span></p>
+                <p><strong>صور كرت آسيا:</strong> <span id="successCard"></span></p>
+                <p><strong>رقم واتساب:</strong> <span id="successWhatsapp"></span></p>
+                <p><strong>اسم تيليجرام:</strong> <span id="successTelegram"></span></p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="btn-primary">العودة للصفحة الرئيسية</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Yuki Store - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load order data from sessionStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderData = sessionStorage.getItem('orderData');
+            
+            if (orderData) {
+                const data = JSON.parse(orderData);
+                
+                document.getElementById('successProduct').textContent = data.product;
+                document.getElementById('successPackage').textContent = data.package;
+                document.getElementById('successPrice').textContent = data.price;
+                document.getElementById('successRoblox').textContent = data.robloxUsername;
+                document.getElementById('successCard').textContent = data.imagesCount ? `${data.imagesCount} صورة` : 'لا توجد صور';
+                document.getElementById('successWhatsapp').textContent = data.whatsapp;
+                document.getElementById('successTelegram').textContent = data.telegram;
+            } else {
+                // If no order data, redirect to home
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
+
