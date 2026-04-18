@@ -82,7 +82,7 @@ const murderMystery2Products = [
         id: '10mm', 
         name: ' alien set', 
         image: 'https://tse1.mm.bing.net/th/id/OIP.NPK-rhnqvDtr_ZmnsyuBawHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', 
-        price: 45000, 
+        price: 70000, 
         featured: true, 
         features: ['', '', ' '] 
     },
